@@ -5,15 +5,15 @@ import java.io.*;
 import java.net.*;
 public class Server {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws EOFException{
 		System.out.println("Le serveur a commencé à travailler : ");
 		Server central = new Server();
 		central.init();
 	}
 	
-	public void init() {
+	public void init(){
 		try {
-			ServerSocket serversocket = new ServerSocket(1077);
+			ServerSocket serversocket = new ServerSocket(1079);
 			while(true) {
 				Socket client = serversocket.accept();
 				new HandlerThread(client);

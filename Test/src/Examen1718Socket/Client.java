@@ -11,10 +11,14 @@ public class Client {
 			while(true) {
 				Socket socket = null;
 				try {
-					socket = new Socket(adresseClient,1077);
+					socket = new Socket(adresseClient,1079);
 					DataInputStream info = new DataInputStream(socket.getInputStream());
 					DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+					System.out.println("Entrez un mot en anglais pour obtenir sa traduction en français : par exemple dog, si vous voulez terminer la consultation, écrivez STOP en majuscule");
 					String mot = new BufferedReader(new InputStreamReader(System.in)).readLine();
+					if(mot.equals("STOP")) {
+						break;
+					}
 					out.writeUTF(mot);
 					
 					String reponse = info.readUTF();
