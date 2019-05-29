@@ -50,7 +50,6 @@ public class TermFrequencyStats {
 		Collections.sort(ordre,vc);
 		for(Iterator<Map.Entry<String, Integer>> it = ordre.iterator();it.hasNext();) {
 			System.out.println(it.next());
-		}
-			
+		}		
 	}
 }
