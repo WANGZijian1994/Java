@@ -9,15 +9,15 @@ public class IndexOfAndLastIndexOfExemple {
 	public static void main(String[] args) {
 		String s1="ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGH";
 		int index1=s1.indexOf("CD");
-		System.out.println(index1);//2 s1[2]='C'
+		System.out.println(index1);//2 s1.charAt(i)='C'
 		index1=s1.indexOf('C');
-		System.out.println(index1);
+		System.out.println(index1);//2
         int index2 = s1.indexOf('A',25);
         System.out.println(index2);//27
-        int index3 = s1.lastIndexOf('A');//倒着数
+        int index3 = s1.lastIndexOf('A');//
         System.out.println(index3);//27
-        int index4 = s1.lastIndexOf('A',2);//index仍然正着数，只是顺序变化。
-        System.out.println(index4);//0
+        int index4 = s1.lastIndexOf('F',28);//
+        System.out.println(index4);//
 	}
 
 }
